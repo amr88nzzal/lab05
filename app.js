@@ -12,21 +12,30 @@ var pElement = document.getElementById('taxi')
 
 // check if the car type is validate
 
+function getCarType(){
 while(carType!='1' && carType!='2' && carType!='3' )
 {
     alert("OPS!! ... \n you entered a invalid choice \n \n    Please try again!  ")
     carType = prompt('Please Select the Taxi type \n 1- car with tow seats \n 2- car with four seats \n 3- car with nine seats')
-}
+}}
+getCarType();
 
 // check if the number of cars  is validate
-var NumCars = prompt('How many cars do you need?');
 
+    var NumCars = prompt('How many cars do you need?');
+    
+  
+
+var NumCarsF = function (){
+    // NumCars();
 while(!(NumCars>0))
 {
     alert("OPS!! ... \n you entered a invalid number \n \n    Please try again!  ");
     NumCars = prompt('How many cars do you need?');
-}
+  
+}}
 // Display the cars
+function ShowResultF (){
 for (var i=0 ;i<NumCars;i++)
 {
     if(carType=='1'){
@@ -38,9 +47,10 @@ for (var i=0 ;i<NumCars;i++)
         document.write(taxi3);
 
         }
-            
-   console.log(taxi1);
-}
+}}
+
+NumCarsF();
+ShowResultF ();
 // Print the number of cars
-pElement.textContent= ' You ordered : '+NumCars  + ' cars.'
+pElement.textContent= ' You ordered : ' +NumCars+ ' cars.'
 
